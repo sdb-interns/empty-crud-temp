@@ -16,7 +16,7 @@ services:
       context: .
       dockerfile: ./infra/docker/development/nginx/Dockerfile
     ports:
-      - 48080:80
+      - 58080:80
     volumes:
       - php-fpm-socket:/var/run/php-fpm
       - ./laravel:/work/laravel
@@ -27,7 +27,7 @@ services:
       context: .
       dockerfile: ./infra/docker/development/mysql/Dockerfile
     ports:
-      - 43306:3306
+      - 53306:3306
     volumes:
       - db-store:/var/lib/mysql
       - ./infra/docker/development/mysql/init:/docker-entrypoint-initdb.d
